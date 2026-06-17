@@ -92,7 +92,7 @@ def send_whatsapp(phone: str, status: int):
 # -------- HOME ROUTE --------
 @app.get("/")
 def home():
-    return {"index.html"}
+    return FileResponse("index.html")
 @app.post("/predict")
 def predict(data: LoanInput):
     try:
