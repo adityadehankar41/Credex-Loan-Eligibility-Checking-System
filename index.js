@@ -127,7 +127,7 @@ const phone = document.getElementById("phone").value;
   submitBtn.textContent = '⏳ Processing...';
 
   try {
-    var response = await fetch('http://localhost:8000/predict', {
+    var response = await fetch('https://credex-loan-eligibility-checking-system.onrender.com/predict', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
