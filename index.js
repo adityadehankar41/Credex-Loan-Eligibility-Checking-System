@@ -194,7 +194,7 @@ function showLoanResult(prediction, phone) {
   document.getElementById('loan-result-modal').classList.add('open');
 
   // ✅ WHATSAPP OPEN
-  fetch('http://localhost:8000/send-whatsapp', {
+  fetch('https://credex-loan-eligibility-checking-system.onrender.com/send-whatsapp', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
