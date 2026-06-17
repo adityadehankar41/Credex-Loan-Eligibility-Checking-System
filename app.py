@@ -87,7 +87,7 @@ def send_whatsapp(phone: str, status: int):
         print("❌ Twilio Error:", str(e))
 
 # -------- HOME ROUTE --------
-@app.post("/")
+@app.get("/")
 def predict(data: LoanInput):
     try:
         data_dict = data.dict()
