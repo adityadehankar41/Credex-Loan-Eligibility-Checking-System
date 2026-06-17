@@ -88,6 +88,9 @@ def send_whatsapp(phone: str, status: int):
 
 # -------- HOME ROUTE --------
 @app.get("/")
+def home():
+    return {"message": "Credex Loan Eligibility API is running"}
+@app.post("/predict")
 def predict(data: LoanInput):
     try:
         data_dict = data.dict()
