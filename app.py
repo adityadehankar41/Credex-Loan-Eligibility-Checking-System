@@ -4,9 +4,12 @@ from pydantic import BaseModel
 import joblib
 import pandas as pd
 from twilio.rest import Client
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 # # # -------- FASTAPI APP --------
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="."), name="static")
 
 # -------- CORS --------
 app.add_middleware(
@@ -89,7 +92,7 @@ def send_whatsapp(phone: str, status: int):
 # -------- HOME ROUTE --------
 @app.get("/")
 def home():
-    return {"message": "Credex Loan Eligibility API is running"}
+    return {"index.html"}
 @app.post("/predict")
 def predict(data: LoanInput):
     try:
