@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credex Bank</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/FRONTEND/frontend/index.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-inner">
+      <a class="logo" onclick="showPage('home')">
+        <div class="logo-icon">Cx</div>
+        <span class="logo-text">CRED
+          <span>EX</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+        <li><a onclick="showPage('products')" id="nav-products">Products</a></li>
+        <li><a onclick="showPage('loans')" id="nav-loans">Loans</a></li>
+        <li><a onclick="showPage('offers')" id="nav-offers">Offers</a></li>
+        <!-- <li><a onclick="showPage('news')" id="nav-news">News</a></li> -->
+      </ul>
+      <button class="nav-btn" onclick="showPage('netbanking')">LOG IN</button>
+    </div>
+  </nav>
+
+  <!-- ══ HOME PAGE ══ -->
+  <div class="page active" id="page-home">
+    <div class="ticker-bar">
+      <div class="ticker-inner">
+        <span class="ticker-label">LIVE</span>
+        <div class="ticker-scroll">
+          <div class="ticker-content">
+            <span>CREDEX Share: ₹1,842.60 <span class="up">▲ +2.3%</span></span>
+            <span>Savings Rate: 3.50% p.a.</span>
+            <span>Home Loan @ 8.50% p.a.</span>
+            <span>FD Special Rate: 7.25% for 15 months</span>
+            <span>SENSEX: 72,186 <span class="up">▲ 312</span></span>
+            <span>NIFTY: 21,853 <span class="up">▲ 95</span></span>
+            <span>USD/INR: 83.12 <span class="down">▼ 0.08</span></span>
+            <span>Gold: ₹72,500/10g <span class="up">▲ 120</span></span>
+            <span>CREDEX Share: ₹1,842.60 <span class="up">▲ +2.3%</span></span>
+            <span>Savings Rate: 3.50% p.a.</span>
+            <span>Home Loan @ 8.50% p.a.</span>
+            <span>FD Special Rate: 7.25% for 15 months</span>
+            <span>SENSEX: 72,186 <span class="up">▲ 312</span></span>
+            <span>NIFTY: 21,853 <span class="up">▲ 95</span></span>
+            <span>USD/INR: 83.12 <span class="down">▼ 0.08</span></span>
+            <span>Gold: ₹72,500/10g <span class="up">▲ 120</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-shapes"></div>
+      <div class="hero-card">
+        <div class="cn">•••• •••• •••• 4521</div>
+        <div class="cl">CREDEX</div>
+      </div>
+      <div class="hero-content">
+        <span class="hero-tag">✦ New Launch</span>
+        <h1>Banking That <em>Understands</em> Your World</h1>
+        <p>Seamless, secure and smart loan status check with Credex. From accounts to investments — your journey starts here.</p>
+        <div class="hero-btns">
+          <button class="btn-gold" onclick="openAccountModal()">Open Account Now</button>
+          <button class="btn-outline-w" onclick="showPage('products')">Explore Products</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="quick-links">
+      <div class="ql-inner">
+        <a class="ql-item" href="#" onclick="event.preventDefault();openAccountModal()">
+          <div class="ql-icon">🏦</div><span class="ql-label">Open Account</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">💳</div><span class="ql-label">Apply Card</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">🏠</div><span class="ql-label">Home Loan</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">📈</div><span class="ql-label">Invest Now</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">🔄</div><span class="ql-label">Fund Transfer</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">🧾</div><span class="ql-label">Pay Bills</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">🛡️</div><span class="ql-label">Insurance</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">📍</div><span class="ql-label">ATM Locator</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">💹</div><span class="ql-label">Forex</span>
+        </a>
+        <a class="ql-item" href="#">
+          <div class="ql-icon">🎓</div><span class="ql-label">Edu Loan</span>
+        </a>
+      </div>
+    </div> -->
+
+    <div class="stats-strip">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-num">8.7Cr+</div>
+          <div class="stat-label">Happy Customers across India</div>
+        </div>
+        <div>
+          <div class="stat-num">16,000+</div>
+          <div class="stat-label">Bank Branches Pan India</div>
+        </div>
+        <div>
+          <div class="stat-num">20,000+</div>
+          <div class="stat-label">ATM Network nationwide</div>
+        </div>
+        <div>
+          <div class="stat-num">₹22L Cr</div>
+          <div class="stat-label">Total Assets under management</div>
+        </div>
+        <div>
+          <div class="stat-num">99.9%</div>
+          <div class="stat-label">Digital Uptime guaranteed</div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="sec-header" style="margin-bottom:28px">
+          <div>
+            <div class="sec-label">Secure Access</div>
+            <div class="sec-title">Net Banking Login</div>
+          </div>
+        </div>
+        <div class="netbanking-grid">
+          <div>
+            <div class="cta-title">Your Bank.<br>Always Open.</div>
+            <p class="cta-desc">Access your accounts 24/7. Check balances, transfer funds, pay bills, and manage
+              investments — all at your fingertips.</p>
+            <div class="cta-features">
+              <div class="cta-feat">
+                <div class="feat-dot"></div>256-bit SSL Encryption
+              </div>
+              <div class="cta-feat">
+                <div class="feat-dot"></div>2-Factor Authentication
+              </div>
+              <div class="cta-feat">
+                <div class="feat-dot"></div>Real-time Transaction Alerts
+              </div>
+              <div class="cta-feat">
+                <div class="feat-dot"></div>Zero Fraud Liability Policy
+              </div>
+            </div>
+          </div>
+          <div class="login-form">
+            <div class="form-group"><label>Customer ID / Username</label><input type="text"
+                placeholder="Enter your Customer ID"></div>
+            <div class="form-group"><label>Password / IPIN</label><input type="password"
+                placeholder="Enter your password"></div>
+            <div class="form-row">
+              <div class="form-group"><label>Account Type</label><select>
+                  <option>Savings Account</option>
+                  <option>Current Account</option>
+                  <option>Loan Account</option>
+                </select></div>
+              <div class="form-group"><label>Captcha: 8 + 3 =</label><input type="text" placeholder="Answer"></div>
+            </div>
+            <button class="btn-login" onclick="showPage('netbanking')">Login to check Eligibility →</button>
+            <div class="forgot-links"><a href="#">Forgot ID?</a><a href="#">Reset Password</a><a href="#">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light">
+      <div class="container">
+        <div class="app-banner">
+          <div>
+            <div class="app-title">Credex Mobile Banking</div>
+            <p class="app-sub">Transfer money, pay bills, invest, and track spends — all from one powerful app. Rated
+              4.8★ with over 10 million downloads.</p>
+            <div class="store-btns">
+              <a href="#" class="store-btn"><span class="si">🍎</span><span class="st">Download on the<strong>App
+                    Store</strong></span></a>
+              <a href="#" class="store-btn"><span class="si">▶</span><span class="st">Get it on<strong>Google
+                    Play</strong></span></a>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="ps-logo">CREDEX</div>
+              <div class="ps-bal">₹1,24,560</div>
+              <div class="ps-lbl">Available Balance</div>
+              <div class="ps-acts">
+                <div class="ps-act">
+                  <div class="ic">💸</div><span>Send</span>
+                </div>
+                <div class="ps-act">
+                  <div class="ic">📥</div><span>Receive</span>
+                </div>
+                <div class="ps-act">
+                  <div class="ic">📋</div><span>History</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══ PRODUCTS PAGE ══ -->
+  <div class="page" id="page-products">
+    <section style="padding-top:48px">
+      <div class="container">
+        <div class="sec-header">
+          <div>
+            <div class="sec-label">What We Offer</div>
+            <div class="sec-title">Our Popular Products</div>
+          </div>
+          <a href="#" class="see-all">View All →</a>
+        </div>
+        <div class="products-grid">
+          <a href="#" class="product-card" onclick="event.preventDefault();openAccountModal()">
+            <div class="p-icon" style="background:#e8f0fe">💰</div>
+            <h3>Savings Account</h3>
+            <p>Earn up to 3.5% interest with zero maintenance fees and instant online access.</p><span
+              class="p-link">Apply Now →</span>
+          </a>
+          <a href="#" class="product-card">
+            <div class="p-icon" style="background:#fce8e8">💳</div>
+            <h3>Credit Cards</h3>
+            <p>5% cashback on all spends. Premium rewards, lounge access & more perks.</p><span class="p-link">Apply Now
+              →</span>
+          </a>
+          <a href="#" class="product-card">
+            <div class="p-icon" style="background:#e8f5e9">🏠</div>
+            <h3>Home Loan</h3>
+            <p>Get your dream home with rates starting at 8.50% p.a. & instant approval.</p><span class="p-link">Check
+              Eligibility →</span>
+          </a>
+          <a href="#" class="product-card">
+            <div class="p-icon" style="background:#fff8e1">📊</div>
+            <h3>Fixed Deposits</h3>
+            <p>Earn 7.25% p.a. on special 15-month FDs. Safe, secure, and assured returns.</p><span class="p-link">Book
+              Now →</span>
+          </a>
+          <a href="#" class="product-card">
+            <div class="p-icon" style="background:#f3e5f5">📱</div>
+            <h3>PayZap UPI</h3>
+            <p>Instant money transfer, bill payments, and QR payments — all in one app.</p><span class="p-link">Download
+              App →</span>
+          </a>
+          <a href="#" class="product-card">
+            <div class="p-icon" style="background:#e0f7fa">🌏</div>
+            <h3>Forex Card</h3>
+            <p>Travel abroad with multi-currency forex cards. Load up to 22 currencies.</p><span class="p-link">Get Card
+              →</span>
+          </a>
+          <a href="#" class="product-card">
+            <div class="p-icon" style="background:#fbe9e7">🚗</div>
+            <h3>Car Loan</h3>
+            <p>Drive your dream car with loans starting at 8.99% p.a. & quick disbursal.</p><span class="p-link">Apply
+              Now →</span>
+          </a>
+          <a href="#" class="product-card">
+            <div class="p-icon" style="background:#e8f5e9">📈</div>
+            <h3>Mutual Funds</h3>
+            <p>Start SIP from ₹500/month. Diversified portfolios for all risk appetites.</p><span class="p-link">Start
+              Investing →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══ OFFERS PAGE ══ -->
+  <div class="page" id="page-offers">
+    <section style="padding-top:48px">
+      <div class="container">
+        <div class="sec-header">
+          <div>
+            <div class="sec-label">Exclusive Deals</div>
+            <div class="sec-title">Offers & Benefits</div>
+          </div>
+          <a href="#" class="see-all">All Offers →</a>
+        </div>
+        <div class="offers-grid">
+          <div class="offer-card">
+            <div class="offer-banner" style="background:linear-gradient(135deg,#1a237e,#283593)">🛒<span
+                class="offer-badge">HOT</span></div>
+            <div class="offer-body">
+              <h4>10% Off on Amazon</h4>
+              <p>Use Credex Platinum Credit Card & get 10% instant discount on Amazon. Max ₹1,500 off.</p>
+            </div>
+          </div>
+          <div class="offer-card">
+            <div class="offer-banner" style="background:linear-gradient(135deg,#b71c1c,#c62828)">✈️<span
+                class="offer-badge">LIMITED</span></div>
+            <div class="offer-body">
+              <h4>Free Lounge Access</h4>
+              <p>Enjoy 8 complimentary airport lounge visits per year with Credex Elite Card.</p>
+            </div>
+          </div>
+          <div class="offer-card">
+            <div class="offer-banner" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)">🏠</div>
+            <div class="offer-body">
+              <h4>Home Loan at 8.50%</h4>
+              <p>Special festive rate for salaried customers. Processing fee waived off. Limited time offer.</p>
+            </div>
+          </div>
+          <div class="offer-card">
+            <div class="offer-banner" style="background:linear-gradient(135deg,#4a148c,#6a1b9a)">🎬<span
+                class="offer-badge">NEW</span></div>
+            <div class="offer-body">
+              <h4>Free OTT Subscription</h4>
+              <p>Get 1 year free OTT membership on activation of Credex Lifestyle Card.</p>
+            </div>
+          </div>
+          <div class="offer-card">
+            <div class="offer-banner" style="background:linear-gradient(135deg,#e65100,#f57c00)">⛽</div>
+            <div class="offer-body">
+              <h4>Fuel Surcharge Waiver</h4>
+              <p>1% fuel surcharge waiver on all petrol pump transactions above ₹400.</p>
+            </div>
+          </div>
+          <div class="offer-card">
+            <div class="offer-banner" style="background:linear-gradient(135deg,#006064,#00838f)">🍽️</div>
+            <div class="offer-body">
+              <h4>Dining Discounts</h4>
+              <p>Up to 20% off at 2,500+ partner restaurants across India with Credex Dine Out.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══ NEWS PAGE ══ -->
+  <div class="page" id="page-news">
+    <section class="bg-light" style="padding-top:48px">
+      <div class="container">
+        <div class="sec-header">
+          <div>
+            <div class="sec-label">Media Center</div>
+            <div class="sec-title">News & Updates</div>
+          </div>
+          <a href="#" class="see-all">All News →</a>
+        </div>
+        <div class="news-grid">
+          <div class="news-card">
+            <div class="news-img" style="background:#e3f2fd">🏆</div>
+            <div class="news-body">
+              <div class="news-date">February 18, 2026</div>
+              <h4>Credex Wins 'Best Digital Bank of the Year' at India Banking Awards 2026</h4>
+              <p>Credex Bank received the prestigious award for outstanding digital transformation and customer service
+                excellence.</p>
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-img" style="background:#f3e5f5">📊</div>
+            <div class="news-body">
+              <div class="news-date">February 12, 2026</div>
+              <h4>Credex Q3 Results: Net Profit Surges 22% to ₹16,372 Crore</h4>
+              <p>Strong loan growth and improved asset quality drive record quarterly performance for the bank.</p>
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-img" style="background:#e8f5e9">🌱</div>
+            <div class="news-body">
+              <div class="news-date">February 5, 2026</div>
+              <h4>Credex Launches Green Home Loan at Subsidized Rates for Eco-Friendly Homes</h4>
+              <p>New product targets customers building IGBC-certified green homes with special interest benefits.</p>
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-img" style="background:#fff8e1">🤝</div>
+            <div class="news-body">
+              <div class="news-date">January 28, 2026</div>
+              <h4>Credex Partners with NPCI for New UPI Feature Rollout</h4>
+              <p>New features include credit line on UPI and enhanced spend analytics for customers.</p>
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-img" style="background:#fce8e8">🏙️</div>
+            <div class="news-body">
+              <div class="news-date">January 20, 2026</div>
+              <h4>Credex Opens 500 New Branches in Tier-2 and Tier-3 Cities</h4>
+              <p>Massive expansion to bring premium banking services to underserved regions of India.</p>
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-img" style="background:#e8eaf6">🔐</div>
+            <div class="news-body">
+              <div class="news-date">January 10, 2026</div>
+              <h4>Credex Enhances Cybersecurity with AI-Powered Fraud Detection System</h4>
+              <p>New AI engine detects and blocks suspicious transactions in under 50 milliseconds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══ NET BANKING PAGE ══ -->
+  <div class="page" id="page-netbanking">
+    <div class="nb-page">
+      <div class="nb-card">
+        <div class="nb-header">
+          <div class="nb-chip">CREDEX</div>
+          <h2>Sign In to NetBanking</h2>
+          <p>Enter your credentials to access your account securely.</p>
+        </div>
+        <div class="nb-body">
+          <div class="nb-tabs">
+            <div class="nb-tab active" onclick="setTab(this)">Customer ID</div>
+            <div class="nb-tab" onclick="setTab(this)">Account No.</div>
+            <div class="nb-tab" onclick="setTab(this)">Debit Card</div>
+          </div>
+          <div class="nb-field"><label>Customer ID</label><input type="text" id="nb-id"
+              placeholder="Enter your Customer ID" /></div>
+          <div class="nb-field"><label>Password / IPIN</label><input type="password" id="nb-pw"
+              placeholder="Enter your password" /></div>
+          <div class="nb-field">
+            <label>Account Type</label>
+            <select
+              style="width:100%;padding:12px 14px;border:1.5px solid #e8eaed;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option>Savings Account</option>
+              <option>Current Account</option>
+              <option>Loan Account</option>
+            </select>
+          </div>
+          <div class="nb-field">
+            <label for="phone">Phone Number (WhatsApp)</label>
+            <input type="text" id="phone" placeholder="+91XXXXXXXXXX" required>
+          </div>
+          <button class="nb-btn" onclick="handleLogin()">🔒 Login Securely</button>
+          <div class="nb-security">🔐 Secured with 256-bit TLS encryption</div>
+        </div>
+        <div class="nb-footer"><a href="#">New User? Register</a><a href="#">Forgot Password?</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ LOANS PAGE ══ -->
+  <div class="page" id="page-loans">
+    <div class="loan-hero">
+      <h1>Smart Loans for Every <em>Dream</em></h1>
+      <p>Low interest rates, quick approvals, and flexible repayment — Credex makes borrowing effortless.</p>
+      <div class="loan-hero-btns">
+        <button class="btn-gold" onclick="openModal('General Loan')">Check
+              Eligibility →</button>
+        <button class="btn-outline-w"
+          onclick="document.getElementById('emi-section').scrollIntoView({behavior:'smooth'})">EMI Calculator ↓</button>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="sec-header">
+          <div>
+            <div class="sec-label">Our Loan Products</div>
+            <div class="sec-title">Choose Your Loan</div>
+          </div>
+        </div>
+        <div class="loans-grid">
+          <div class="loan-card">
+            <div class="loan-card-top">
+              <div class="loan-emoji">🏠</div>
+              <div>
+                <h3>Home Loan</h3>
+                <div class="loan-rate">From 8.50% p.a.</div>
+              </div>
+            </div>
+            <p>Turn your dream home into reality. Get up to ₹5 Crore with flexible tenures up to 30 years and zero
+              prepayment charges.</p>
+            <div class="loan-card-footer">
+              <div class="loan-meta"><strong>Up to ₹5 Cr</strong>Loan Amount</div>
+              <div class="loan-meta"><strong>Up to 30 Yrs</strong>Tenure</div><button class="loan-apply-btn"
+                onclick="openModal('Home Loan')">Check →</button>
+            </div>
+          </div>
+          <div class="loan-card">
+            <div class="loan-card-top">
+              <div class="loan-emoji">💼</div>
+              <div>
+                <h3>Personal Loan</h3>
+                <div class="loan-rate">From 10.99% p.a.</div>
+              </div>
+            </div>
+            <p>Instant approval, no collateral needed. Get funds up to ₹40 Lakhs within 4 hours for any personal need.
+            </p>
+            <div class="loan-card-footer">
+              <div class="loan-meta"><strong>Up to ₹40 L</strong>Loan Amount</div>
+              <div class="loan-meta"><strong>Up to 5 Yrs</strong>Tenure</div><button class="loan-apply-btn"
+                onclick="openModal('Personal Loan')">Check →</button>
+            </div>
+          </div>
+          <div class="loan-card">
+            <div class="loan-card-top">
+              <div class="loan-emoji">🚗</div>
+              <div>
+                <h3>Car Loan</h3>
+                <div class="loan-rate">From 8.99% p.a.</div>
+              </div>
+            </div>
+            <p>Drive your dream car today. Finance up to 100% of the on-road price with quick disbursal in 48 hours.</p>
+            <div class="loan-card-footer">
+              <div class="loan-meta"><strong>Up to ₹1.5 Cr</strong>Loan Amount</div>
+              <div class="loan-meta"><strong>Up to 7 Yrs</strong>Tenure</div><button class="loan-apply-btn"
+                onclick="openModal('Car Loan')">Check →</button>
+            </div>
+          </div>
+          <div class="loan-card">
+            <div class="loan-card-top">
+              <div class="loan-emoji">🏗️</div>
+              <div>
+                <h3>Business Loan</h3>
+                <div class="loan-rate">From 12.00% p.a.</div>
+              </div>
+            </div>
+            <p>Fuel your business growth. Collateral-free loans up to ₹2 Crore for MSMEs, startups and established
+              businesses.</p>
+            <div class="loan-card-footer">
+              <div class="loan-meta"><strong>Up to ₹2 Cr</strong>Loan Amount</div>
+              <div class="loan-meta"><strong>Up to 5 Yrs</strong>Tenure</div><button class="loan-apply-btn"
+                onclick="openModal('Business Loan')">Check →</button>
+            </div>
+          </div>
+          <div class="loan-card">
+            <div class="loan-card-top">
+              <div class="loan-emoji">🎓</div>
+              <div>
+                <h3>Education Loan</h3>
+                <div class="loan-rate">From 9.50% p.a.</div>
+              </div>
+            </div>
+            <p>Invest in your future. Cover tuition, living expenses and more for studies in India or abroad up to ₹75
+              Lakhs.</p>
+            <div class="loan-card-footer">
+              <div class="loan-meta"><strong>Up to ₹75 L</strong>Loan Amount</div>
+              <div class="loan-meta"><strong>Up to 15 Yrs</strong>Tenure</div><button class="loan-apply-btn"
+                onclick="openModal('Education Loan')">Check →</button>
+            </div>
+          </div>
+          <div class="loan-card">
+            <div class="loan-card-top">
+              <div class="loan-emoji">🥇</div>
+              <div>
+                <h3>Gold Loan</h3>
+                <div class="loan-rate">From 7.50% p.a.</div>
+              </div>
+            </div>
+            <p>Get instant cash against your gold jewellery. Loans up to 75% of gold value disbursed in just 30 minutes.
+            </p>
+            <div class="loan-card-footer">
+              <div class="loan-meta"><strong>Up to ₹50 L</strong>Loan Amount</div>
+              <div class="loan-meta"><strong>Up to 3 Yrs</strong>Tenure</div><button class="loan-apply-btn"
+                onclick="openModal('Gold Loan')">Check →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light" id="emi-section">
+      <div class="container">
+        <div class="sec-header">
+          <div>
+            <div class="sec-label">Plan Ahead</div>
+            <div class="sec-title">EMI Calculator</div>
+          </div>
+        </div>
+        <div class="emi-calc-wrap">
+          <div>
+            <div class="calc-title">Calculate Your EMI</div>
+            <p class="calc-sub">Use the sliders to find the perfect loan amount and tenure that fits your monthly
+              budget.</p>
+            <div class="calc-field">
+              <label>Loan Type</label>
+              <select id="calc-type" onchange="calcEMI()"
+                style="width:100%;padding:11px 13px;border:1.5px solid var(--gray);border-radius:7px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text);background:white;outline:none;">
+                <option value="8.5">Home Loan — 8.50%</option>
+                <option value="10.99">Personal Loan — 10.99%</option>
+                <option value="8.99">Car Loan — 8.99%</option>
+                <option value="12">Business Loan — 12.00%</option>
+                <option value="9.5">Education Loan — 9.50%</option>
+                <option value="7.5">Gold Loan — 7.50%</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label>Loan Amount</label>
+              <div class="val-display"><span>Loan Amount</span><span id="disp-amount">₹25,00,000</span></div>
+              <input type="range" id="calc-amount" min="100000" max="10000000" step="50000" value="2500000"
+                oninput="calcEMI()">
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px">
+                <span>₹1L</span><span>₹1Cr</span></div>
+            </div>
+            <div class="calc-field">
+              <label>Loan Tenure</label>
+              <div class="val-display"><span>Tenure</span><span id="disp-tenure">10 Years</span></div>
+              <input type="range" id="calc-tenure" min="1" max="30" step="1" value="10" oninput="calcEMI()">
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px">
+                <span>1 Yr</span><span>30 Yrs</span></div>
+            </div>
+            <div class="calc-field">
+              <label>Interest Rate (p.a.)</label>
+              <div class="val-display"><span>Rate</span><span id="disp-rate">8.50%</span></div>
+              <input type="range" id="calc-rate" min="7" max="18" step="0.25" value="8.5" oninput="calcEMI()">
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px">
+                <span>7%</span><span>18%</span></div>
+            </div>
+          </div>
+          <div class="emi-result">
+            <div class="emi-label">Monthly EMI</div>
+            <div class="emi-amount" id="res-emi">₹30,792</div>
+            <div class="emi-sub">Estimated monthly payment</div>
+            <div class="emi-breakdown">
+              <div class="emi-b-item">
+                <div class="ebi-val" id="res-principal">₹25L</div>
+                <div class="ebi-lbl">Principal</div>
+              </div>
+              <div class="emi-b-item">
+                <div class="ebi-val" id="res-interest">₹11.95L</div>
+                <div class="ebi-lbl">Total Interest</div>
+              </div>
+              <div class="emi-b-item">
+                <div class="ebi-val" id="res-total">₹36.95L</div>
+                <div class="ebi-lbl">Total Payable</div>
+              </div>
+            </div>
+            <button class="emi-apply-btn" onclick="openModal('Loan')">Apply for This Loan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="sec-header" style="margin-bottom:28px">
+          <div>
+            <div class="sec-label">Benefits</div>
+            <div class="sec-title">Why Choose Credex Loans?</div>
+          </div>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <h4>Instant Approval</h4>
+            <p>Get in-principle approval within minutes. Paperless process, 100% online.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">📉</div>
+            <h4>Lowest Rates</h4>
+            <p>India's most competitive rates starting at 7.50% p.a. with no hidden charges.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🔄</div>
+            <h4>Flexible Repayment</h4>
+            <p>Choose tenure from 1 to 30 years. Prepay anytime at zero extra cost.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🛡️</div>
+            <h4>100% Secure</h4>
+            <p>Bank-grade security for your data and transactions. RBI regulated and compliant.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══ LOAN APPLICATION MODAL ══ -->
+  <div class="modal-overlay" id="loan-modal" style="align-items:flex-start;padding:20px 0;overflow-y:auto">
+    <div class="modal" style="max-width:560px;margin:20px auto;max-height:none">
+      <div class="modal-head">
+        <h3 id="modal-title">Apply for Loan</h3>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body" style="overflow:visible;max-height:none">
+        <div class="modal-grid">
+          <div class="mfield"><label>Applicant Income (₹)</label><input id="Applicant_Income" type="number"
+              placeholder="e.g. 10000" /></div>
+          <div class="mfield"><label>Co-applicant Income (₹)</label><input id="Coapplicant_Income" type="number"
+              placeholder="e.g. 100000" /></div>
+          <div class="mfield"><label>Age</label><input id="Age" type="number" placeholder="e.g. 30" min="18" max="70" />
+          </div>
+          <div class="mfield"><label>Dependents</label>
+            <select id="Dependents"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+          <div class="mfield"><label>Credit Score</label><input id="Credit_Score" type="number" placeholder="e.g. 750"
+              min="300" max="900" /></div>
+          <div class="mfield"><label>Existing Loans</label>
+            <select id="Existing_Loans"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3+</option>
+            </select>
+          </div>
+          <div class="mfield"><label>DTI Ratio</label><input id="DTI_Ratio" type="number" placeholder="e.g. 0.34"
+              step="0.01" min="0" max="1" /></div>
+          <div class="mfield"><label>Savings (₹)</label><input id="Savings" type="number" placeholder="e.g. 10000" />
+          </div>
+          <div class="mfield"><label>Collateral Value (₹)</label><input id="Collateral_Value" type="number"
+              placeholder="e.g. 10000" /></div>
+          <div class="mfield"><label>Loan Amount (₹)</label><input id="Loan_Amount" type="number"
+              placeholder="e.g. 2500000" /></div>
+          <div class="mfield"><label>Loan Term (Months)</label><input id="Loan_Term" type="number" placeholder="e.g. 60"
+              min="1" max="360" /></div>
+          <div class="mfield"><label>Education Level</label>
+            <select id="Education_Level"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option value="0">Non-Graduate</option>
+              <option value="1">Graduate</option>
+            </select>
+          </div>
+          <div class="mfield"><label>Gender</label>
+            <select id="Gender"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="mfield"><label>Marital Status</label>
+            <select id="Marital_Status"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option>Single</option>
+              <option>Married</option>
+            </select>
+          </div>
+          <div class="mfield"><label>Employment Status</label>
+            <select id="Employment_Status"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option>Salaried</option>
+              <option>Contract</option>
+              <option>Self-Employed</option>
+              <option>Unemployed</option>
+            </select>
+          </div>
+          <div class="mfield"><label>Property Area</label>
+            <select id="Property_Area"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option>Rural</option>
+              <option>Semiurban</option>
+              <option>Urban</option>
+            </select>
+          </div>
+          <div class="mfield"><label>Loan Type</label>
+            <select id="Loan_Purpose"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option>Home Loan</option>
+              <option>Personal Loan</option>
+              <option>Car Loan</option>
+              <option>Business Loan</option>
+              <option>Education Loan</option>
+              <option>Gold Loan</option>
+            </select>
+          </div>
+          <div class="mfield"><label>Employer Category</label>
+            <select id="Employer_Category"
+              style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+              <option>Private</option>
+              <option>Government</option>
+              <option>MNC</option>
+              <option>Business</option>
+            </select>
+          </div>
+          <div class="mfield"><<input id="loan-phone" type="text" placeholder="WhatsApp Number">>
+
+</div>
+        </div>
+        <p id="loan-form-error" style="display:none;color:#dc2626;font-size:13px;margin:8px 0 0;font-weight:500"></p>
+        <button class="modal-submit" style="margin-top:8px" onclick="submitLoanApp()">Submit Application →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ LOAN RESULT MODAL ══ -->
+  <!-- Score bar, application summary, and key factors removed — result comes from backend -->
+  <div class="modal-overlay" id="loan-result-modal" style="align-items:flex-start;padding:20px 0;overflow-y:auto">
+    <div class="modal" style="max-width:460px;margin:20px auto;max-height:none">
+      <div class="modal-head">
+        <h3>Loan Decision</h3>
+        <button class="modal-close" onclick="closeLoanResult()">✕</button>
+      </div>
+      <div class="modal-body" style="overflow:visible;max-height:none;text-align:center">
+
+        <!-- Status banner — populated by showLoanResult() -->
+        <div id="result-banner" style="border-radius:12px;padding:32px 24px;margin-bottom:24px">
+          <div id="result-icon" style="font-size:56px;margin-bottom:12px"></div>
+          <div id="result-status" style="font-size:24px;font-weight:700;margin-bottom:8px"></div>
+          <div id="result-msg" style="font-size:14px;line-height:1.6;opacity:.88"></div>
+        </div>
+
+        <!-- Action buttons -->
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="modal-submit" style="flex:1;background:#0d1b3e"
+            onclick="closeLoanResult();showPage('loans')">Apply Another Loan</button>
+          <button class="modal-submit" style="flex:1;background:#6b7280"
+            onclick="closeLoanResult();showPage('home')">Back to Home</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ LOGIN GATE MODAL ══ -->
+  <div class="modal-overlay" id="login-gate-modal" style="align-items:flex-start;padding:20px 0;overflow-y:auto">
+    <div class="modal" style="max-width:480px;margin:20px auto;max-height:none">
+      <div class="modal-head">
+        <h3>Before You Apply</h3>
+        <button class="modal-close" onclick="closeLoginGate()">✕</button>
+      </div>
+      <div class="modal-body" style="overflow:visible;max-height:none">
+        <p id="gate-loan-hint" style="color:#6b7280;font-size:14px;margin:0 0 20px">Please log in or register to apply
+          for a loan.</p>
+        <div style="border:1.5px solid #e5e7eb;border-radius:10px;padding:18px;margin-bottom:14px">
+          <div style="font-weight:600;font-size:14px;margin-bottom:4px">🔐 Existing Customer</div>
+          <div style="font-size:13px;color:#6b7280;margin-bottom:14px">Log in to pre-fill your details and track your
+            application.</div>
+          <div class="mfield" style="margin-bottom:10px"><label>Customer ID / Username</label><input type="text"
+              id="gate-id" placeholder="Enter your Customer ID" /></div>
+          <div class="mfield" style="margin-bottom:10px"><label>Password / PIN</label><input type="password"
+              id="gate-pw" placeholder="Enter your password or PIN" /></div>
+          <p id="gate-error" style="display:none;color:#dc2626;font-size:13px;margin:0 0 10px"></p>
+          <button class="modal-submit" onclick="handleGateLogin()">🔒 Login &amp; Continue →</button>
+          <div style="font-size:12px;color:#6b7280;margin-top:10px;text-align:center">
+            <a href="#" style="color:#0d1b3e">Forgot Password?</a> &nbsp;·&nbsp; <a href="#"
+              style="color:#0d1b3e">Forgot Customer ID?</a>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin:4px 0 14px">
+          <div style="flex:1;height:1px;background:#e5e7eb"></div>
+          <span style="font-size:12px;color:#9ca3af;font-weight:500">OR</span>
+          <div style="flex:1;height:1px;background:#e5e7eb"></div>
+        </div>
+        <div id="new-customer-panel"
+          style="border:1.5px solid #e5e7eb;border-radius:10px;padding:18px;background:#f8f9fc">
+          <div style="font-weight:600;font-size:14px;margin-bottom:4px">✨ New Customer</div>
+          <div style="font-size:13px;color:#6b7280;margin-bottom:14px">Create your Credex ID once to apply and track
+            your applications anytime.</div>
+          <div class="mfield" style="margin-bottom:10px"><label>Choose a Username</label><input type="text"
+              id="new-username" placeholder="e.g. rahul_sharma92" /></div>
+          <div class="mfield" style="margin-bottom:10px"><label>Create a 6-digit PIN</label><input type="password"
+              id="new-pin" placeholder="••••••" maxlength="6" oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
+          </div>
+          <div class="mfield" style="margin-bottom:10px"><label>Confirm PIN</label><input type="password"
+              id="new-pin-confirm" placeholder="••••••" maxlength="6"
+              oninput="this.value=this.value.replace(/[^0-9]/g,'')" /></div>
+          <div class="mfield" style="margin-bottom:14px"><label>Mobile Number</label><input type="tel" id="new-mobile"
+              placeholder="+91 00000 00000" maxlength="13" /></div>
+          <p id="new-customer-error" style="display:none;color:#dc2626;font-size:13px;margin:0 0 10px"></p>
+          <button class="modal-submit" style="background:#1a2f5a" onclick="registerNewCustomer()">Create Account &amp;
+            Apply →</button>
+          <div style="font-size:12px;color:#9ca3af;margin-top:10px;text-align:center">🔐 Your PIN is stored securely and
+            used only for login</div>
+        </div>
+        <div id="already-registered-note"
+          style="display:none;border:1.5px solid #d1fae5;border-radius:10px;padding:20px;background:#f0fdf4;text-align:center">
+          <div style="font-size:28px;margin-bottom:8px">✅</div>
+          <div style="font-weight:600;font-size:15px;color:#15803d;margin-bottom:6px">You're already registered!</div>
+          <div style="font-size:13px;color:#6b7280">Use your username and PIN in the login panel above to continue.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ OPEN ACCOUNT MODAL ══ -->
+  <div class="modal-overlay" id="account-modal" style="align-items:flex-start;padding:20px 0;overflow-y:auto">
+    <div class="modal" style="max-width:520px;margin:20px auto;max-height:none">
+      <div class="modal-head">
+        <h3>Open a Credex Account</h3>
+        <button class="modal-close" onclick="closeAccountModal()">✕</button>
+      </div>
+      <div class="modal-body" style="overflow:visible;max-height:none">
+        <div style="display:flex;align-items:center;margin-bottom:24px;gap:0">
+          <div id="step-dot-1"
+            style="width:28px;height:28px;border-radius:50%;background:#0d1b3e;color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">
+            1</div>
+          <div id="step-line-1" style="flex:1;height:3px;background:#0d1b3e"></div>
+          <div id="step-dot-2"
+            style="width:28px;height:28px;border-radius:50%;background:#e5e7eb;color:#9ca3af;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">
+            2</div>
+          <div id="step-line-2" style="flex:1;height:3px;background:#e5e7eb"></div>
+          <div id="step-dot-3"
+            style="width:28px;height:28px;border-radius:50%;background:#e5e7eb;color:#9ca3af;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">
+            3</div>
+        </div>
+        <div id="acc-step-1">
+          <div style="font-weight:600;font-size:15px;color:#0d1b3e;margin-bottom:4px">Personal Details</div>
+          <div style="font-size:13px;color:#6b7280;margin-bottom:18px">Tell us a little about yourself</div>
+          <div class="modal-grid">
+            <div class="mfield"><label>Full Name</label><input type="text" id="acc-name" placeholder="Your full name" />
+            </div>
+            <div class="mfield"><label>Date of Birth</label><input type="date" id="acc-dob" /></div>
+            <div class="mfield"><label>Mobile Number</label><input type="tel" id="acc-mobile"
+                placeholder="+91 00000 00000" /></div>
+            <div class="mfield"><label>Email Address</label><input type="email" id="acc-email"
+                placeholder="you@email.com" /></div>
+            <div class="mfield"><label>PAN Number</label><input type="text" id="acc-pan" placeholder="e.g. ABCDE1234F"
+                maxlength="10" style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()" /></div>
+            <div class="mfield"><label>Aadhaar Number</label><input type="text" id="acc-aadhaar"
+                placeholder="12-digit Aadhaar" maxlength="12" oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
+            </div>
+          </div>
+          <p id="acc-error-1" style="display:none;color:#dc2626;font-size:13px;margin:8px 0 0"></p>
+          <button class="modal-submit" style="margin-top:16px" onclick="accStep1Next()">Next: Account Details →</button>
+        </div>
+        <div id="acc-step-2" style="display:none">
+          <div style="font-weight:600;font-size:15px;color:#0d1b3e;margin-bottom:4px">Account Details</div>
+          <div style="font-size:13px;color:#6b7280;margin-bottom:18px">Choose your account type and preferences</div>
+          <div class="modal-grid">
+            <div class="mfield"><label>Account Type</label>
+              <select id="acc-type"
+                style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+                <option value="Savings Account">Savings Account</option>
+                <option value="Current Account">Current Account</option>
+                <option value="Salary Account">Salary Account</option>
+                <option value="NRI Account">NRI Account</option>
+              </select>
+            </div>
+            <div class="mfield"><label>Occupation</label>
+              <select id="acc-occupation"
+                style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;background:white;outline:none;color:#1a1a2e">
+                <option>Salaried</option>
+                <option>Self-Employed</option>
+                <option>Business Owner</option>
+                <option>Student</option>
+                <option>Retired</option>
+                <option>Homemaker</option>
+              </select>
+            </div>
+            <div class="mfield"><label>Annual Income (₹)</label><input type="number" id="acc-income"
+                placeholder="e.g. 600000" /></div>
+            <div class="mfield"><label>Preferred Branch City</label><input type="text" id="acc-city"
+                placeholder="e.g. Mumbai" /></div>
+            <div class="mfield full"><label>Residential Address</label><input type="text" id="acc-address"
+                placeholder="House No, Street, Area, City, PIN" /></div>
+          </div>
+          <p id="acc-error-2" style="display:none;color:#dc2626;font-size:13px;margin:8px 0 0"></p>
+          <div style="display:flex;gap:10px;margin-top:16px">
+            <button class="modal-submit" style="background:#6b7280;flex:1" onclick="accStep2Back()">← Back</button>
+            <button class="modal-submit" style="flex:2" onclick="accStep2Next()">Next: Set Credentials →</button>
+          </div>
+        </div>
+        <div id="acc-step-3" style="display:none">
+          <div style="font-weight:600;font-size:15px;color:#0d1b3e;margin-bottom:4px">Set Your Login Credentials</div>
+          <div style="font-size:13px;color:#6b7280;margin-bottom:18px">Create a username and PIN to access your account
+          </div>
+          <div class="modal-grid">
+            <div class="mfield"><label>Choose Username</label><input type="text" id="acc-username"
+                placeholder="e.g. rahul_sharma92" /></div>
+            <div class="mfield"><label>Create 6-digit PIN</label><input type="password" id="acc-pin"
+                placeholder="••••••" maxlength="6" oninput="this.value=this.value.replace(/[^0-9]/g,'')" /></div>
+            <div class="mfield full"><label>Confirm PIN</label><input type="password" id="acc-pin-confirm"
+                placeholder="••••••" maxlength="6" oninput="this.value=this.value.replace(/[^0-9]/g,'')" /></div>
+          </div>
+          <div
+            style="background:#f0fdf4;border:1.5px solid #d1fae5;border-radius:8px;padding:12px;margin-top:12px;font-size:13px;color:#15803d">
+            ✅ Your account will be activated within 24 hours. A welcome kit will be sent to your address.
+          </div>
+          <p id="acc-error-3" style="display:none;color:#dc2626;font-size:13px;margin:8px 0 0"></p>
+          <div style="display:flex;gap:10px;margin-top:16px">
+            <button class="modal-submit" style="background:#6b7280;flex:1" onclick="accStep3Back()">← Back</button>
+            <button class="modal-submit" style="flex:2;background:#15803d" onclick="submitAccountApp()">🏦 Open My
+              Account →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="main-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" onclick="showPage('home')" style="cursor:pointer">
+          <div class="logo-icon" style="background:rgba(255,255,255,.15);color:var(--gold-light)">Cx</div>
+          <span class="logo-text" style="color:white">CRED<span style="color:var(--gold-light)">EX</span></span>
+        </a>
+        <p>India's most trusted private sector bank. Serving over 8.7 crore customers with innovative banking solutions
+          since 1994.</p>
+        <p style="font-size:11px">Registered & Licensed by Reserve Bank of India<br>IRDAI Reg: CA0013 | AMFI Reg:
+          ARN-0090</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📘</a><a href="#" class="social-link">🐦</a><a href="#"
+            class="social-link">📸</a><a href="#" class="social-link">💼</a><a href="#" class="social-link">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Accounts</h5>
+        <ul>
+          <li><a href="#">Savings Account</a></li>
+          <li><a href="#">Current Account</a></li>
+          <li><a href="#">Salary Account</a></li>
+          <li><a href="#">NRI Accounts</a></li>
+          <li><a href="#">Senior Citizens</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Loans</h5>
+        <ul>
+          <li><a href="#">Home Loan</a></li>
+          <li><a href="#">Personal Loan</a></li>
+          <li><a href="#">Car Loan</a></li>
+          <li><a href="#">Business Loan</a></li>
+          <li><a href="#">Education Loan</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Invest</h5>
+        <ul>
+          <li><a href="#">Mutual Funds</a></li>
+          <li><a href="#">Fixed Deposits</a></li>
+          <li><a href="#">Stocks & ETF</a></li>
+          <li><a href="#">PPF Account</a></li>
+          <li><a href="#">NPS</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Branch Locator</a></li>
+          <li><a href="#">ATM Finder</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">RBI Ombudsman</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Credex Bank Limited. All rights reserved. CIN: L65920MH1994PLC080618</span>
+      <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Disclaimer</a><a
+          href="#">Sitemap</a></div>
+    </div>
+  </footer>
+
+  <script src="/FRONTEND/frontend/index.js"></script>
+</body>
+
+</html>
